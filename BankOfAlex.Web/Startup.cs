@@ -1,4 +1,5 @@
 using BankOfAlex.Web.Areas.Identity;
+using BankOfAlex.Web.Authorization;
 using BankOfAlex.Web.Data;
 using BankOfAlex.Web.Data.Models;
 using Microsoft.AspNetCore.Builder;
@@ -38,8 +39,11 @@ namespace BankOfAlex.Web
 
             services.AddRazorPages(options =>
                 {
-                    options.Conventions.AuthorizeFolder("/");
+                    options.Conventions.AuthorizeFolder("/", "IsAuthenticated");
+                    options.Conventions.AuthorizeFolder("/", "IsAuthorizedToUseTheApp");
                 });
+
+            services.AddCustomAuthorization();
 
             services.AddServerSideBlazor();
 
