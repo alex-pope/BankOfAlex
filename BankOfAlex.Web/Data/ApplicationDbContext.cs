@@ -1,4 +1,4 @@
-﻿using BankOfAlex.Web.Models;
+﻿using BankOfAlex.Web.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

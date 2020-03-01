@@ -1,6 +1,6 @@
 using BankOfAlex.Web.Areas.Identity;
 using BankOfAlex.Web.Data;
-using BankOfAlex.Web.Models;
+using BankOfAlex.Web.Data.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
