@@ -2,6 +2,7 @@ using BankOfAlex.Web.Areas.Identity;
 using BankOfAlex.Web.Authorization;
 using BankOfAlex.Web.Data;
 using BankOfAlex.Web.Data.Models;
+using BankOfAlex.Web.Email;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -44,6 +45,8 @@ namespace BankOfAlex.Web
                 });
 
             services.AddCustomAuthorization();
+
+            services.AddCustomEmailSender(Configuration.GetSection(nameof(BankOfAlex)));
 
             services.AddServerSideBlazor();
 
